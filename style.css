@@ -22,7 +22,7 @@ p {
 }
 
 section {
-  padding: 20px;
+  padding: 40px;
 }
 
 section.alternate-background {
@@ -31,24 +31,12 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
 
-.group {
-  display: flex;
-  flex-direction: column;
-}
 
-.item {
-  flex: 1;
-  margin: 10px;
-}
-
-.item-double {
-  flex: 2;
-}
 
 /* -------  Navigation ------- */
 
@@ -64,14 +52,21 @@ header {
   color: #fff;
 }
 
-header nav ul li {
-  list-style-type: none;
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
+  
 }
 
 header nav ul li a:hover {
@@ -83,6 +78,14 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
 }
 
 form label {
@@ -93,6 +96,7 @@ form select,
 form input {
   margin-bottom: 20px;
   width: 180px;
+  justify-content: flex-end;
 }
 
 form button {
@@ -117,3 +121,29 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 480px) {
+  .group {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .item {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .item-double {
+    flex: 2;
+  }
+  form {
+    display: flex;
+    flex-direction: row;
+  }
+  form div {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    margin-top: 10px;
+  }
+}
