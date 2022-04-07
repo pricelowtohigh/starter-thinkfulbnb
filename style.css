@@ -122,7 +122,7 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 480px) and (max-width: 800px) {
+@media all and (min-width: 480px) and (max-width: 850px) {
   .group {
     display: flex;
     flex-direction: row;
@@ -138,7 +138,7 @@ footer p {
   }
 }
 
-@media all and (min-width: 801px) {
+@media all and (min-width: 851px) {
   form {
     display: flex;
     flex-direction: row;
